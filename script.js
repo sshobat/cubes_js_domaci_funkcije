@@ -3,13 +3,68 @@
 
 // Create a function that should receive an array, and return an array in reverse order. Result should be stored in a variable
 
+// SOLUTION
+
+var numbers = [1, 2, 3, 4, 5];
+
+
+var arr = function(array) {
+    
+    var newArray = [];
+
+    for(i = 0; i < array.length; i++) {
+        newArray[i] = array[array.length - i - 1];
+    }
+    return newArray;
+}
+
+console.log(arr(numbers));
+
+// var a = arr(numbers);
+// console.log(a);
+
 // TASK 2: 
 
 // Create a function that should receive parameter of any type, and console log the type of received data
 
+// SOLUTION
+
+function dataType(data) {
+    console.log(typeof data);
+}
+
+dataType('Something');
+dataType(9);
+dataType(true);
+dataType({name: 'John'});
+
 // TASK 3: 
 
 // Create a function that should receive an array of at least five names, and return the length of the longest name in the array (hint - you can get the length of an string the same way as for array). Result should be stored in a variable
+
+// SOLUTION
+
+var names = ['John', 'Mike', 'Ann', 'Jonas', 'Jo'];
+
+var nameLength = function(firstNames) {
+    var longestName = [];
+    longestName = firstNames[0];
+
+    for (i = 0; i < firstNames.length; i++) {
+        if (firstNames[i].length < firstNames[i + 1].length) {
+            longestName = firstNames[i + 1];
+        }
+    }
+    
+    return longestName.length;
+}
+
+console.log(nameLength(['John', 'Mike', 'Ann', 'Jonas', 'Jo']));
+
+
+
+
+
 
 // TASK 4: 
 
